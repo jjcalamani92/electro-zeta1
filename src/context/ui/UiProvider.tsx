@@ -16,10 +16,10 @@ const UI_INITIAL_STATE: UiState = {
 	isCartOpen: false,
 	site: {
 		_id: "w",
-		title: "Piccoletti",
-		domain: "piccoletti.com",
+		title: "Electro",
+		domain: "electro.com",
 		// logo: "https://res.cloudinary.com/dvcyhn0lj/image/upload/v1647095547/piccoletti-logo_j6hxbw.jpg",
-		logo: "https://res.cloudinary.com/dvcyhn0lj/image/upload/v1647095547/piccoletti-logo_j6hxbw.jpg",
+		logo: "https://res.cloudinary.com/dvcyhn0lj/image/upload/v1655854345/React-jj/blogs/i/logo-mielectro-landingpng_csrh6k.png",
 		numberPhone: "68175851",
 		address: "av fatima",
 		description: "av fatima",
