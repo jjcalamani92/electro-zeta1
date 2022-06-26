@@ -1,12 +1,11 @@
 import { NextPage, GetServerSideProps } from 'next';
 import { PRODUCT_BY_SLUG } from '../../../src/gql/query';
-import { IClothing } from "../../../src/interfaces";
+import { IHomeAppliance } from "../../../src/interfaces";
 import { GraphQLClient } from 'graphql-request';
-import Clothing from '../../../src/db/clothing.schema';
 import { Form } from '../../../components/Components';
 import { LayoutAdmin } from '../../../components/Layout';
 interface Props {
-	product: IClothing;
+	product: IHomeAppliance;
 }
 const client = new GraphQLClient(`${process.env.APIP_URL}/graphql`)
 const ProductPage: NextPage<Props> = ({ product }) => {
@@ -21,7 +20,7 @@ const ProductPage: NextPage<Props> = ({ product }) => {
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 	const { slug = '' } = query
-	let product:IClothing | null | any;
+	let product:IHomeAppliance | null | any;
 	if (slug === 'new') {
 		
     product = {
@@ -38,14 +37,14 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 			tags: [],
 
 			color: 'como se ve en la imagen',
-			sizes:[]
+			// sizes:[]
 
 		}
 	} else {
 		const data = await client.request(
 			PRODUCT_BY_SLUG, { slug: query.slug, site: process.env.API_SITE }
 		);
-		product = data.clothingBySlug
+		product = data.homeApplianceBySlug
 	}
 return {
 	props: {

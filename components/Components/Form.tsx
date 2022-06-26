@@ -25,13 +25,13 @@ interface FormData {
   tags: string[];
 
   color: string;
-  sizes: string[];
+  // sizes: string[];
 }
 interface Props {
   product: FormData
 }
 
-const validSizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL']
+// const validSizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL']
 
 export const Form: FC<Props> = ({ product }) => {
 
@@ -174,7 +174,7 @@ export const Form: FC<Props> = ({ product }) => {
         showConfirmButton: false,
         timer: 1500
       })
-      await axios.put(`${process.env.APIP_URL}/api/clothing/${product._id}`, data)
+      await axios.put(`${process.env.APIP_URL}/api/homeAppliance/${product._id}`, data)
       router.replace('/admin')
 
     } else {
@@ -186,7 +186,7 @@ export const Form: FC<Props> = ({ product }) => {
         timer: 1500
       })
       await axios.post(
-        `${process.env.APIP_URL}/api/clothing`, data);
+        `${process.env.APIP_URL}/api/homeAppliance`, data);
       router.replace(`/admin`)
     }
   }
@@ -497,7 +497,7 @@ export const Form: FC<Props> = ({ product }) => {
 
                   <div className="grid grid-cols-6 gap-6">
 
-                    <div className="col-span-6 sm:col-span-3">
+                    {/* <div className="col-span-6 sm:col-span-3">
                       <fieldset
 
                       >
@@ -528,7 +528,7 @@ export const Form: FC<Props> = ({ product }) => {
                       <div>
                         {errors.sizes?.length === 0 && <span className="text-sm text-red-500">seleccione al menos una talla</span>}
                       </div>
-                    </div>
+                    </div> */}
 
                     <div className="col-span-6 sm:col-span-6">
                       <label htmlFor="color" className="block text-sm font-medium text-gray-700">

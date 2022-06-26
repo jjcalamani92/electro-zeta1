@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { FC, useContext, } from "react";
 import { UiContext } from "../../src/context";
-import { IClothing } from "../../src/interfaces";
+import { IHomeAppliance } from "../../src/interfaces";
 import { SwiperDetail } from "./Swiper";
 import { useRouter } from 'next/router';
 
@@ -12,7 +12,7 @@ function classNames(...classes: string[]) {
 }
 
 interface Props {
-	product: IClothing;
+	product: IHomeAppliance;
 }
 
 export const ProductOverviews: FC<Props> = ({ product }) => {

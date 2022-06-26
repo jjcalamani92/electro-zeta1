@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Category, Featured, IClothing, IMark, Item, Section } from "../../src/interfaces";
+import { Category, Featured, IHomeAppliance, IMark, Item, Section } from "../../src/interfaces";
 import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/router";
@@ -7,7 +7,7 @@ import Image from "next/image";
 import Swal from "sweetalert2";
 
 interface Props {
-	products: IClothing[];
+	products: IHomeAppliance[];
 }
 interface LayoutMarkListAdmin {
 	marks: IMark[];
@@ -103,7 +103,7 @@ export const LayoutItemListAdmin: FC<Props> = ({ products }) => {
 
 					}),
 				// await axios.put(`${process.env.APIS_URL}/api/site/removecategory/${process.env.API_SITE}`, {category: id})
-				await axios.delete(`${process.env.APIP_URL}/api/clothing/${id}`)
+				await axios.delete(`${process.env.APIP_URL}/api/homeAppliance/${id}`)
 				router.reload()
 			}
 		})

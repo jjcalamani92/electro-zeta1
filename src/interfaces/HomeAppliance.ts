@@ -1,4 +1,4 @@
-export interface IClothing {
+export interface IHomeAppliance {
 	_id: string;
 	name: string;
 	brand: string;

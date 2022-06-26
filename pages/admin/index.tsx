@@ -20,9 +20,9 @@ const AdminPage = () => {
 	return (
 		<>
 			<LayoutAdmin>
-				<TableProduct products={data.clothingsAll} />
-				<LayoutItemListAdmin products={data.clothingsAll}/>
-				<Pagination01 setPage={setPage} page={page} length={data.clothingsAll.length} all={PAGE_SIZE} />
+				<TableProduct products={data.homeAppliancesAll} />
+				<LayoutItemListAdmin products={data.homeAppliancesAll}/>
+				<Pagination01 setPage={setPage} page={page} length={data.homeAppliancesAll.length} all={PAGE_SIZE} />
 			</LayoutAdmin>
 		</>
 
