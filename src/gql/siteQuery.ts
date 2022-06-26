@@ -76,6 +76,7 @@ export const S = gql`
 			numberPhone
 			description
 			address
+			location
 			type
 			categories {
 				_id
